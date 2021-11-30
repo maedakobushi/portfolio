@@ -1,0 +1,140 @@
+.loading{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background: #DDD;
+  z-index: 9999;
+}
+.animation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #333;
+  -webkit-animation: lodanimetion 1500ms ease-out forwards infinite;
+  animation: lodanimetion 1500ms ease-out forwards infinite;
+}
+@keyframes lodanimetion {
+  from,to {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+/* --------------------------- */
+/* kv
+/* --------------------------- */
+.kv-wrapper{
+  height: 500px;
+  position: relative;
+  background-image: url("../images/kv-bg.png");    /*キービジュアルの背景画像*/
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.kv-copy{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  overflow: hidden;
+  color: #333;
+}
+.kv-name{
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-top: 40px;
+  display: block;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 1s, opacity linear 0.7s;
+  transform: translate(0, -40px);
+  transition-delay: 0.25s;
+}
+.kv-message{
+  display: block;
+  margin-top: 18px;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 1s, opacity linear 0.7s;
+  transform: translate(0, -30px);
+  font-size: 1.6rem;
+  transition-delay: 0.45s;
+  z-index: 100;
+}
+/* --------------------------- */
+/* works
+/* --------------------------- */
+.works-list{
+  flex-wrap: wrap;
+  margin-bottom: -50px;
+}
+.works-list::after {
+  display: block;
+  content: "";
+  width: 380px;
+  }
+.works-item{
+  width: 47.4%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.works-img-wrapper{
+  margin-bottom: 8px;
+  background-color: #fff;
+  transition: .3s;
+  border: 2px solid #fff;
+}
+.works-item a{
+  display: block;
+}
+.works-item a img{
+  transition: .3s;
+}
+.works-item a:hover{
+  opacity: .8;
+}
+.works-item a:hover img{
+  transform: scale(1.05,1.05);
+}
+.works-item a:hover .works-img-wrapper{
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,.08);
+}
+.works-title{
+  font-weight: bold;
+}
+.works-category{
+  display: block;
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+/* --------------------------- */
+/* about
+/* --------------------------- */
+.about-lead{
+  margin-bottom: 60px;
+}
+@media screen and (max-width:768px){
+
+/* --------------------------- */
+/* works
+/* --------------------------- */
+.works-item{
+  width: 100%;
+}
+  @media screen and (max-width:375px){
+
+/* --------------------------- */
+/* works
+/* --------------------------- */
+.works-item{
+  width: 100%;
+}
